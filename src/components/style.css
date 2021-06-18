@@ -1,0 +1,63 @@
+@import "reset.css";
+
+body {
+	background-color: #171B1F;
+	color: #fff;
+}
+
+.hidden {
+	display: none;
+}
+
+.inner {
+	width: 95%;
+	margin: 0 auto;
+}
+
+header .inner {
+	padding-top: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.clock {
+	width: 33%;
+}
+
+.todo-container {
+	display: flex;
+	width: 33%;
+	justify-content: center;
+}
+
+.login-contianer {
+	width: 33%;
+}
+
+#todo-form {
+	width: 100%;
+}
+
+#todo-input {
+	height: 30px;
+	border: none;
+	width: 100%;
+	background-color: rgb(42, 43, 48);
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+
+#todo-input:focus {
+	outline: none;
+}
+
+#login-input {
+	background-color: rgb(42, 43, 48);
+}
+
+.username {
+	display: flex;
+	width: 33%;
+	justify-content: flex-end;
+}

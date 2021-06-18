@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 class Header extends React.Component {
 	constructor(props) {
@@ -43,22 +44,24 @@ class Header extends React.Component {
 				<div className="inner">
 					<div className="clock">00:00:00</div>
 					<div className="todo-container">
-						<form id="todo--form">
-							<input type="text" id="todo--input" placeholder="Today's Work"></input>
+						<form id="todo-form">
+							<input type="text" id="todo-input" placeholder="Today's Work"></input>
 						</form>
 					</div>
 					<div className="login-container hidden">
-						<form id="login--form" onSubmit={this.handleSubmit}>
+						<form id="login-form" onSubmit={this.handleSubmit}>
 							<input
 								type="text"
-								id="login--input"
+								id="login-input"
 								placeholder="What's your name?"
 								maxLength="15"
 								required={true}
 							></input>
 						</form>
 					</div>
-					<div className="username hidden">Hello {userName}👋</div>
+					<div className="username hidden">
+						<span className="username__text">Hello {userName}👋</span>
+					</div>
 				</div>
 			</header>
 		)
