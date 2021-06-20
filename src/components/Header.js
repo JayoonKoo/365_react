@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Clock from "./Clock";
 
 class Header extends React.Component {
 	constructor(props) {
@@ -42,7 +43,7 @@ class Header extends React.Component {
 		return (
 			<header>
 				<div className="inner">
-					<div className="clock">00:00:00</div>
+					<Clock />
 					<div className="todo-container">
 						<form id="todo-form">
 							<input type="text" id="todo-input" placeholder="Today's Work"></input>
