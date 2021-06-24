@@ -15,7 +15,7 @@ class Header extends React.Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		const loginInput = document.getElementById("login--input");
+		const loginInput = document.getElementById("login-input");
 		const userName = loginInput.value;
 		localStorage.setItem(this.USER_KEY, userName);
 		this.loginContainer.classList.add(this.HIDDEN_CN);

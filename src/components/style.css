@@ -6,7 +6,13 @@ body {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
+}
+
+input {
+	outline: none;
+	border:none;
+	color: inherit;
 }
 
 .inner {
@@ -30,8 +36,10 @@ header .inner {
 	justify-content: center;
 }
 
-.login-contianer {
+.login-container {
+	display: flex;
 	width: 33%;
+	justify-content: flex-end;
 }
 
 #todo-form {

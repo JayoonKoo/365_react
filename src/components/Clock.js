@@ -1,29 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
+function Clock() {
+	const [date, setDate] = useState(new Date());
+	let hour = "";
+	let minuts = "";
+	let seconds = "";
 
-class Clock extends React.Component {
-	state = {
-		hour: "",
-		minuts: "",
-		seconds: "",
+	const setTime = () => {
+		hour = String(date.getHours()).padStart(2, "0");
+		minuts = String(date.getMinutes()).padStart(2, "0");
+		seconds = String(date.getSeconds()).padStart(2, "0");
 	}
 
-	getTime() {
-		const date = new Date();
-		const hour = String(date.getHours()).padStart(2, "0");
-		const minuts = String(date.getMinutes()).padStart(2, "0");
-		const seconds = String(date.getSeconds()).padStart(2, "0");
-		this.setState({hour, minuts, seconds});
+	setTime();
+	const getTime = () => {
+		setDate(new Date());
+		setTime();
 	}
 
-	componentDidMount() {
-		setInterval(this.getTime(), 1000);
-	}
-
-	render() {
-		const { hour, minuts, seconds } = this.state;
-		return <div className="clock">{`${hour}:${minuts}:${seconds}`}</div>;
-	}
+	setInterval(getTime, 1000);
+	return (
+		<div className="clock">{`${hour}:${minuts}:${seconds}`}</div>
+	)
 }
 
 export default Clock;
