@@ -4,7 +4,7 @@
 
 배포: 
 
-react, JavaScript, github Pages
+react, JavaScript, github Pages, react-hook
 
 ## 주요 기능
 ### 사용자 이름 저장
